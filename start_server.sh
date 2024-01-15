@@ -50,11 +50,11 @@ nohup $SERVER_COMMAND > logs/server.log 2>&1 &
 echo "Virtual environment activated. Server is running in the background."
 
 # Monitor and restart the server if it stops in the background
-(while true; do
+while true; do
     if ! is_server_running; then
         echo "Server is not running. Restarting..."
         nohup $SERVER_COMMAND > logs/server.log 2>&1 &
         echo "Server restarted."
     fi
     sleep 10  # Adjust the sleep interval as needed
-done) &  # Run the subshell in the background
+done  # Run the subshell in the background

@@ -2,7 +2,6 @@ from flask import Flask
 from flask import request
 from decoder import process_image
 
-
 app = Flask(__name__)
 
     
@@ -17,7 +16,7 @@ def main():
             if '.jpg' in image_name:
                 decoded_phrase = process_image(image_name)
 
-                return {"response": decoded_phrase}
+                return {"response": decoded_phrase.replace("\n", "").replace("\f", "")}
             
             elif '.jpeg' in image_name: 
                 image.save(image_name)
