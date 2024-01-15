@@ -1,0 +1,15 @@
+blinker       
+click         
+Flask         
+itsdangerous  
+Jinja2        
+MarkupSafe    
+numpy         
+opencv-python 
+packaging     
+pillow        
+pip           
+pytesseract   
+setuptools    
+tesseract     
+Werkzeug      
